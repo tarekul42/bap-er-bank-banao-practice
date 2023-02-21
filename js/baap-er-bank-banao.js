@@ -37,6 +37,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const newBalanceTotal = previousBalanceAmount + newDepositAmount;
 
     balanceField.innerText = newBalanceTotal;
+  })
 
     //                           button withdraw
 
@@ -56,19 +57,12 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
       const withdrawBalance = document.getElementById('withdraw-total');
       const withdrawBalanceString = withdrawBalance.innerText;
       const withdrawBalanceAmount = parseFloat(withdrawBalanceString);
-
       // console.log(withdrawBalanceAmount);
-
-      
       // console.log(withdrawTotal);
-
-      
       const BalanceField = document.getElementById('balance-total');
       const BalanceFieldString = BalanceField.innerText;
       const balanceFieldAmount = parseFloat(BalanceFieldString);
-      
       // console.log(balanceFieldAmount);
-      
       if(balanceFieldAmount >= withdrawAmount ){
         const withdrawTotal = withdrawAmount + withdrawBalanceAmount;
         withdrawBalance.innerText = withdrawTotal;
@@ -78,22 +72,13 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
       else{
         alert('Please deposit. You Have not enough money')
       }
-
       // const TotalBalanceIs = balanceFieldAmount - withdrawAmount;
-
       // console.log(TotalBalanceIs);
-
-
-
     })
-
-
     // const balanceTotalForDeposit = document.getElementById('balance-total');
     // const balanceTotalForDepositNumber = parseFloat(balanceTotalForDeposit.innerText);
-
     // balanceTotalForDeposit.innerText = balanceTotalForDepositNumber + depositTotalNumber;
 
-})
 
 /* 
 document.getElementById("btn-deposit").addEventListener("click", function() {
