@@ -47,34 +47,42 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
       const withdrawFieldString = withdrawField.value;
       const withdrawAmount = parseFloat(withdrawFieldString)
 
-      console.log(withdrawAmount);
+      // console.log(withdrawAmount);
 
 
       withdrawField.value = '';
+
 
       const withdrawBalance = document.getElementById('withdraw-total');
       const withdrawBalanceString = withdrawBalance.innerText;
       const withdrawBalanceAmount = parseFloat(withdrawBalanceString);
 
-      console.log(withdrawBalanceAmount);
+      // console.log(withdrawBalanceAmount);
 
-      const withdrawTotal = withdrawAmount + withdrawBalanceAmount;
+      
+      // console.log(withdrawTotal);
 
-      console.log(withdrawTotal);
-
-      withdrawBalance.innerText = withdrawTotal;
-
+      
       const BalanceField = document.getElementById('balance-total');
       const BalanceFieldString = BalanceField.innerText;
       const balanceFieldAmount = parseFloat(BalanceFieldString);
+      
+      // console.log(balanceFieldAmount);
+      
+      if(balanceFieldAmount >= withdrawAmount ){
+        const withdrawTotal = withdrawAmount + withdrawBalanceAmount;
+        withdrawBalance.innerText = withdrawTotal;
+        const TotalBalanceIs = balanceFieldAmount - withdrawAmount;
+        BalanceField.innerText = TotalBalanceIs;
+      }
+      else{
+        alert('Please deposit. You Have not enough money')
+      }
 
-      console.log(balanceFieldAmount);
+      // const TotalBalanceIs = balanceFieldAmount - withdrawAmount;
 
-      const TotalBalanceIs = balanceFieldAmount - withdrawAmount;
+      // console.log(TotalBalanceIs);
 
-      console.log(TotalBalanceIs);
-
-      BalanceField.innerText = TotalBalanceIs;
 
 
     })
