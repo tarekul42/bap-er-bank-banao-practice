@@ -66,6 +66,7 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
       if(balanceFieldAmount >= withdrawAmount ){
         const withdrawTotal = withdrawAmount + withdrawBalanceAmount;
         withdrawBalance.innerText = withdrawTotal;
+        
         const TotalBalanceIs = balanceFieldAmount - withdrawAmount;
         BalanceField.innerText = TotalBalanceIs;
       }
